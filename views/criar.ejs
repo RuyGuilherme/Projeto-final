@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/criar.css">
+    
+
+    <title>Publique !</title>
+</head>
+<body>
+    <%- include('header'); %>
+    <main>
+
+        <section id="inscrever">
+          
+            <form form method="POST" action="/criar">
+                <div>
+                    <label for="nome">Digite o seu nome: </label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome da Musica" required>
+                </div>
+            
+                <div>
+                    <label for="email">Digite o seu email: </label>
+                    <input type="text" name="email" id="email" placeholder="Nome da Musica" required>
+                </div>
+
+                <div>
+                    <label for="titulo">Digite o titulo de seu artigo: </label>
+                    <input type="text" name="titulo" id="titulo" placeholder="Nome da Musica" required>
+                </div>
+
+                <div>
+                    <label for="descricao">Digite a descrição do artigo: </label>
+                    <input type="text" name="descricao" id="descricao" placeholder="Descrição">
+                </div>
+    
+                <div>
+                    <label for="imagem">Coloque o link para a imagem do artigo: </label>
+                    <input type="text" name="imagem" id="imagem" placeholder="Link da imagem" required>
+                </div>
+            
+                <button type="submit">Criar</button>
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>
