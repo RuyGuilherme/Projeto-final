@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/artigo.css">
+    <title>Editar</title>
+
+</head>
+    <body>
+      <section id="inscrever">
+     
+        <form action="/editar/<%= musica.id %>" method="POST">
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Nome da Musica" required>
+            </div>
+        
+            <div>
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email" placeholder="Nome da Musica" required>
+            </div>
+
+            <div>
+                <label for="titulo">Artigo: </label>
+                <input type="text" name="titulo" id="titulo" placeholder="Nome da Musica" required>
+            </div>
+
+            <div>
+                <label for="descricao">Descrição do artigo: </label>
+                <input type="text" name="descricao" id="descricao" placeholder="Descrição">
+            </div>
+
+            <div>
+                <label for="imagem">imagem: </label>
+                <input type="text" name="imagem" id="imagem" placeholder="Link da imagem" required>
+            </div>
+        
+            <button type="submit">Editar</button>
+        </form>
+    </section>
+
+          
+  </body>
+</html>

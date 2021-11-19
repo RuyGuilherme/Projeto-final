@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"> 
+    <title>Artigo de desenvolvimento digital</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+          <nav>
+            <p class="brand"><strong>Share</strong></p>
+            <ul>
+              <li><a href="#catalogo">Artigos</a></li>
+              <li><a href="/sobre">Sobre</a></li>
+              <li><a href="/criar">Escrever artigos</a></li>
+              <li><a  href="#login"><button>Login</button></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+  
+     <% if(message != "") {  %>
+          <section id="message">
+              <p><%= message %></p> <span id="close">&times;</span>
+          </section>
+      <% }  %>
+  
+      <section id="noticia">
+        <% artigo.forEach(item => { %>
+            
+                <article id="catalogo">
+                   <ul>
+                        <li>Titulo: <%= item.titulo %></li>
+                        <a href="/detalhes/<%= item.id %>">
+                            <img src="<%= item.imagem %>" width=200>
+                        </a>
+                        <li>Artigo: <%= item.descrição %></li>
+                    </ul>
+                  </article>
+            
+        <% }) %> 
+
+    </section>
+   
+    <section id="login" class="login">
+      <h2>Fazer Login!</h2>
+
+      <form action="/login" method="POST">
+          <div>
+              <label for="nome">Digite seu login: </label>
+              <input type="text" name="usuario" id="nome" placeholder="Digite seu nome" required>
+          </div>
+      
+          <div>
+              <label for="senha">Digite sua senha: </label>
+              <input type="senha" name="senha" id="senha" placeholder="Digite sua senha" required>
+          </div>
+      
+          <button type="/login"> Enter </button>
+      </form>
+  </section>
+
+  
+    <section>
+        <main class="index" id>
+               <% artigo.forEach((formula, find) => { %>
+                 <section class="containerCard" class="animation_in"> 
+            <article class="card_content">
+          <a class= "linken" href="/detalhes/<%= find %>">
+              
+              <h2 class="nomeHome"><%= formula.nome %></h2>
+              <h4 class="emailHome"><%= formula.email %></h4>
+              <h4 class="tituloHome"><%= formula.titulo %></h4>
+              <p class="publiHome"><%= formula.publi %></p>
+         </a>
+            </article>
+           <% }) %>
+         </main>
+       </section>
+
+       <div class="img">
+
+        <% artigo.forEach(item => { %>
+          <ul>
+            <img src="<%= item.imagem %>" width=200 height="200">
+          </ul>
+        <% }) %> 
+        </div>
+
+
+
+      <footer>
+          <div class="last">Catalogo 2021 - Sembre online</div>
+      </footer>
+
+   </body>
+</html>
