@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -35,4 +36,43 @@
           </article>
         </section>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/artigo.css">
+
+
+   
+    <title>Artigo</title>
+</head>
+<body>
+    <%- include('header'); %>
+
+        <section class="containerCard" class="animation_in">
+          <article class="card_content">
+            
+              <% Artigos.forEach((artigo, find) => { %>
+              <section class="divisao-detalhes">
+
+                  <article class="detalhes-conteudo">
+
+                      <img class="img" src="<%= artigo.imagem %>">
+                      <p class="infonome"> Nome: <%= artigo.nome %></p>
+                      <p class="infoemail"> email: <%= artigo.email %></p>
+                      <p class="infotitulo"> titulo: <%= artigo.titulo %></p>
+                      <p class="infodes"> Descrição: <%= artigo.descricao %></p>
+                      <p class="infoimagem">imagem: <%= artigo.imagem %></p>
+                     
+              </section>
+              <% }) %>
+
+          </article>
+        </section>
+</body>
+>>>>>>> 3708d397a04091178b239bd68cf25298510f0662
 </html>
